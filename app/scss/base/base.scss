@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 // ***** RESETS *****
 *,
@@ -11,6 +13,10 @@
 html {
   // 1 rem = 10px > 10:16 = 0.625‬ > 62.5% 
   font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 77%;
+  }
 }
 
 body {
