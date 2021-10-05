@@ -4,7 +4,7 @@
 
 .section-cta {
   height: 100vh;
-  padding: 0 11.46%; // 165 od 1440 = 12%
+  padding: 0 11.46%; 
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: var(--white);
@@ -26,6 +26,10 @@
   grid-template-columns: repeat(2, .5fr);
   column-gap: 4.5rem;
   background-color: transparent;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @include respond(phone) {
     grid-template-columns: 1fr;
@@ -139,6 +143,7 @@
       font-size: 1.1rem;
       text-align: center;
       margin-top: -1.2rem;
+      align-self: center !important;
 
       @include respond(phone) {
         margin: 0 4rem;
@@ -153,7 +158,30 @@
   }
 }
 
+*:focus {
+  outline: none; 
+  box-shadow: 0 0 0 0.3rem rgba(255, 121, 121, .5);
+}
 
+
+// FORM CONTROL:
+.cta-form__input.success {
+  border-color: var(--success-color);
+}
+
+.cta-form__input.error {
+  border-color: var(--error-color);
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 95%;
+}
+
+.cta-form small:not(:last-child) {
+  margin-top: -2rem;
+  align-self: flex-end;
+  display: none;
+  color: var(--error-color);
+}
 
 
 

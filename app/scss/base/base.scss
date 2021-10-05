@@ -17,6 +17,14 @@ html {
   @include respond(big-desktop) {
     font-size: 77%;
   }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 62.5%;
+  }
 }
 
 body {
