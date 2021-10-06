@@ -51,13 +51,18 @@ const checkLength = function(input, min, max) {
 // EVENT LISTENER:
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   checkRequired(inputs);
   checkLength(password, 6, 16);
   checkEmail(email);
 });
 
-
+form.addEventListener('click', (e) => {
+  const input = e.target.closest('.cta-form__input');
+  input.classList.remove('error');
+  const small = input.nextElementSibling;
+  small.style.display = 'none';
+  small.textContent = '';
+});
 
 
 
