@@ -19,22 +19,14 @@ $breakpoints: (
     @content;
   };
 
-  @if $size == big-desktop {
+  @if $size == 'big-desktop' {
     @media (min-width: 112.5em) {
       // Up > 1800px 
       @content;
     };
-  } // MOramo da proverim da l radi, ako ne samo razdvojim u drugi mixin. ili u ovom isto samo sa if/else.
+  } 
 };
 
-/*
-// Primer code-a kada koristim mixin:
-h1 {
-  @include respond(phone) {
-    font-size: 3rem;
-  }; 
-};
-*/
 
 
 
